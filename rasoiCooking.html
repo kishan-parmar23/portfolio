@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=checkbox] {
+            display: none;
+            }
+  
+  .container img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+    }
+  
+  input[type=checkbox]:checked ~ label > img {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+    </style>
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
 </head>
-<body>
+<body class="bg-light">
     <my-toolbar></my-toolbar>
     <div class="container">
-        <p class="fs-1 fw-bold text-center">Rasoin Cookin</p>
+        <p class="fs-1 fw-bold text-center">Rasoi Cooking</p>
         <p class="fs-4 fw-lighter">Background</p>
         <p class="fs-4 fw-lighter">Skills & Actions</p>
         <p class="fs-4 fw-lighter">Outcomes</p>
     </div>
-    <div>
-        
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <p class="fs-4 fw-lighter">Competitor Analysis</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-light">Item 1</li>
+                    <li class="list-group-item list-group-item-light">Item 2</li>
+                </ul>
+            </div>
+            <div class="col-7" >
+                <input type="checkbox" id="zoomCheck">
+                <label for="zoomCheck">
+                    <img class="img-fluid" src="./images/My Capstone - Frame 2-2.jpg" alt="">
+                </label>
+            </div>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
